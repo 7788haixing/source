@@ -8,6 +8,10 @@ then
   exit 1
 fi
 
+git add -A
+git commit -m "update"
+git push origin main
+
 rm -rf ./public
 hugo -t even
 yes | cp -r public/* $public_dir/
